@@ -168,9 +168,9 @@ public class UserManagerImpl implements UserManager {
         if (userGroupUpdateVO.getTitle() != null && userGroupUpdateVO.getTitle().isEmpty())
             userGroupUpdateVO.setTitle(ModelUtils.isNotEmpty(userGroupUpdateVO.getName()) ? userGroupUpdateVO.getName() : userGroupVO.getName());
 
-        GeneralValidator.checkLength(userGroupUpdateVO.getName(), "name", fieldLengthMaxDefault, fieldLengthMinDefault);
-        GeneralValidator.checkLength(userGroupUpdateVO.getDescription(), "description", descriptionLengthMaxDefault, descriptionLengthMinDefault);
-        GeneralValidator.checkLength(userGroupUpdateVO.getTitle(), "title", fieldLengthMaxDefault, fieldLengthMinDefault);
+//        GeneralValidator.checkLength(userGroupUpdateVO.getName(), "name", fieldLengthMaxDefault, fieldLengthMinDefault);
+//        GeneralValidator.checkLength(userGroupUpdateVO.getDescription(), "description", descriptionLengthMaxDefault, descriptionLengthMinDefault);
+//        GeneralValidator.checkLength(userGroupUpdateVO.getTitle(), "title", fieldLengthMaxDefault, fieldLengthMinDefault);
     }
 
     private void validateUserGroupCreateVO(long requesterSsoId, UserGroupVO.UserGroupCreateVO userGroupCreateVO) {
@@ -191,9 +191,9 @@ public class UserManagerImpl implements UserManager {
         if (ModelUtils.isEmpty(userGroupCreateVO.getDescription()))
             userGroupCreateVO.setDescription(userGroupCreateVO.getName());
 
-        GeneralValidator.checkLength(userGroupCreateVO.getName(), "name", fieldLengthMaxDefault, fieldLengthMinDefault);
-        GeneralValidator.checkLength(userGroupCreateVO.getDescription(), "description", descriptionLengthMaxDefault, descriptionLengthMinDefault);
-        GeneralValidator.checkLength(userGroupCreateVO.getTitle(), "title", fieldLengthMaxDefault, fieldLengthMinDefault);
+//        GeneralValidator.checkLength(userGroupCreateVO.getName(), "name", fieldLengthMaxDefault, fieldLengthMinDefault);
+//        GeneralValidator.checkLength(userGroupCreateVO.getDescription(), "description", descriptionLengthMaxDefault, descriptionLengthMinDefault);
+//        GeneralValidator.checkLength(userGroupCreateVO.getTitle(), "title", fieldLengthMaxDefault, fieldLengthMinDefault);
     }
 
     public UserGroupVO.UserGroupGetVO getPodUserGroup(String groupPath) {

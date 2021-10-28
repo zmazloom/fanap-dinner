@@ -28,7 +28,7 @@ import static com.google.common.base.Predicates.*;
 @EnableSwagger2
 public class SwaggerConfig {
 
-    @Value("${platform.core.host}")
+    @Value("${platform.address}")
     private String coreHost;
 
     @Bean
